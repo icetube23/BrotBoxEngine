@@ -43,10 +43,10 @@ namespace bbe {
 			m_data[m_size - 1].nextPoolChunk = nullptr;
 		}
 
-		PoolAllocator(const PoolAllocator& other) = delete; // Copy Constructor
-		PoolAllocator(PoolAllocator&& other) = delete; // Move Constructor
+		PoolAllocator(const PoolAllocator& other)			 = delete; // Copy Constructor
+		PoolAllocator(PoolAllocator&& other)				 = delete; // Move Constructor
 		PoolAllocator& operator=(const PoolAllocator& other) = delete; // Copy Assignment
-		PoolAllocator& operator=(PoolAllocator&& other) = delete; // Move Assignment
+		PoolAllocator& operator=(PoolAllocator&& other)		 = delete; // Move Assignment
 
 		~PoolAllocator() {
 			if (m_openAllocations != 0) {

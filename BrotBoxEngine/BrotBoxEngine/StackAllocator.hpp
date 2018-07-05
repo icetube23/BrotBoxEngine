@@ -75,10 +75,10 @@ namespace bbe {
 			m_head = m_data;
 		}
 
-		StackAllocator(const StackAllocator& other) = delete; // Copy Constructor
-		StackAllocator(StackAllocator&& other) = delete; // Move Constructor
+		StackAllocator(const StackAllocator& other)			   = delete; // Copy Constructor
+		StackAllocator(StackAllocator&& other)				   = delete; // Move Constructor
 		StackAllocator& operator=(const StackAllocator& other) = delete; // Copy Assignment
-		StackAllocator& operator=(StackAllocator&& other) = delete; // Move Assignment
+		StackAllocator& operator=(StackAllocator&& other)	   = delete; // Move Assignment
 
 		~StackAllocator() {
 			if (m_data != m_head) {
